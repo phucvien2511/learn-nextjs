@@ -1,6 +1,7 @@
 import ProjectsTableV2 from "@/components/Dashboard/ProjectsTableV2";
 import DashboardLayout from "./layout";
 import ProjectsTable from "@/components/Dashboard/ProjectsTable";
+import ProjectsTableV3 from "@/components/Dashboard/ProjectsTableV3";
 
 export default function Dashboard() {
     return (
@@ -11,7 +12,7 @@ export default function Dashboard() {
                     Hello
                 </div>
                 <div className="flex flex-col max-h-screen w-[calc(100%-300px)]">
-                    <ProjectsTableV2 />
+                    <ProjectsTableV3 />
                     <div className="h-[80px] border border-black">
                         Verify data
                     </div>

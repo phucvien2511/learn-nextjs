@@ -12,7 +12,11 @@ import { getWorkDates } from "./helper/getWorkDates";
 import "./styles.css";
 import { Project, WorkDate } from "./helper/types";
 
+console.log(tableCellClasses);
 const StyledTableCell = styled(TableCell)(() => ({
+    [`&.${tableCellClasses.root}`]: {
+        minWidth: "144px",
+    },
     [`&.${tableCellClasses.head}`]: {
         backgroundColor: "#f5f5f5",
         fontWeight: 600,

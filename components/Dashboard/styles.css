@@ -8,9 +8,9 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
 }
-.MuiTableCell-root {
+/* .MuiTableCell-root {
     min-width: 144px;
-}
+} */
 .MuiTableCell-head {
     height: 40px;
     padding-top: 0;
