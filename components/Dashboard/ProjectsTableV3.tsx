@@ -79,9 +79,9 @@ const ProjectsTableV3 = () => {
         const rowData: { [key: string]: any } = {
             // work_date: workDate.date + " " + workDate.day,
             work_date: (
-                <div className="flex justify-between w-[144px]">
+                <div className="flex justify-between w-[144px] sticky left-0 top-0">
                     <span>{workDate.date}</span>
-                    <span>{workDate.day}</span>
+                    <span className="font-bold">{workDate.day}</span>
                 </div>
             ),
         };
@@ -99,7 +99,8 @@ const ProjectsTableV3 = () => {
     );
     // Customize styles for table
     const classNames = {
-        base: ["w-full"],
+        base: ["w-full", "h-[80%]"],
+        wrapper: ["p-0"],
         tr: ["[&>th]:first:text-xl"], // Change header row style
     };
     return (
@@ -113,7 +114,23 @@ const ProjectsTableV3 = () => {
                 {(item) => (
                     <TableRow key={item.key}>
                         {(columnKey) => (
-                            <TableCell>
+                            <TableCell
+                                style={{
+                                    minWidth: "144px",
+                                    position:
+                                        columnKey === "work_date"
+                                            ? "sticky"
+                                            : "static",
+                                    left:
+                                        columnKey === "work_date" ? 0 : "auto",
+                                    zIndex:
+                                        columnKey === "work_date" ? 1 : "auto",
+                                    background:
+                                        columnKey === "work_date"
+                                            ? "#fff"
+                                            : "inherit",
+                                }}
+                            >
                                 {getKeyValue(item, columnKey)}
                             </TableCell>
                         )}
