@@ -1,18 +1,17 @@
 "use client";
 
-import { borderRight, styled } from "@mui/system";
+import { styled } from "@mui/system";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
-import TableHead, { tableHeadClasses } from "@mui/material/TableHead";
+import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { getWorkDates } from "./helper/getWorkDates";
 import "./styles.css";
 import { Project, WorkDate } from "./helper/types";
 
-console.log(tableHeadClasses);
 const StyledTableCell = styled(TableCell)(() => ({
     [`&.${tableCellClasses.head}`]: {
         backgroundColor: "#f5f5f5",
@@ -20,10 +19,6 @@ const StyledTableCell = styled(TableCell)(() => ({
         maxWidth: "144px",
         borderLeft: "1px solid #e0e0e0",
         borderRight: "1px solid #e0e0e0",
-    },
-    [`&.${tableHeadClasses}`]: {
-        top: 40,
-        background: "red",
     },
     [`&.${tableCellClasses.body}`]: {
         maxWidth: "144px",

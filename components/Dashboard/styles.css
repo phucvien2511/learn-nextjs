@@ -29,4 +29,5 @@
 .MuiTableHead-root > tr:nth-child(2) {
     position: sticky;
     top: 40px;
+    z-index: 1;
 }
