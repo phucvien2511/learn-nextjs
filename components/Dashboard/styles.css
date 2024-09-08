@@ -1,0 +1,32 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.MuiTableCell-root {
+    min-width: 144px;
+}
+.MuiTableCell-head {
+    height: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.MuiTableCell-body {
+    height: 32px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.MuiTableCell-stickyHeader {
+    z-index: 2;
+}
+
+.MuiTableHead-root > tr:nth-child(2) {
+    position: sticky;
+    top: 40px;
+}
